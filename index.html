@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CS 420: Introduction to the Theory of Computation - Tiago Cogumbreiro</title>
+  <link href="https://fonts.googleapis.com/css?family=Arsenal|Quicksand|Droid+Sans+Mono|Raleway" rel="stylesheet">
+  <link rel="stylesheet" href="/css/bulma.css">
+  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js" integrity="sha384-kW+oWsYx3YpxvjtZjFXqazFpA7UP/MbiY4jvs+RWZo2+N94PFZ36T6TFkc9O3qoB" crossorigin="anonymous"></script>
+</head>
+
+
+<body>
+  <section class="hero is-medium">
+  <div class="tabs is-toggle is-toggle-rounded is-centered"
+    style="margin-left: 1em; margin-top:1em; margin-bottom: 1em;">
+    <!--
+    <h1 style="line-height: 36.5px"><a href="https://cogumbreiro.github.io//">Tiago Cogumbreiro</a></h1>
+    -->
+    <ul>
+      <li><a href="https://cogumbreiro.github.io//"><span>Tiago Cogumbreiro</span></a></li>
+      <li><a href="https://umb-svl.gitlab.io/"><span>Software Verification Lab</span></a></li>
+      <li>
+        <a href="mailto:tiago.cogumbreiro@umb.edu">
+          <span class="icon is-small"><i class="fas fa-envelope"></i></span>
+          <span>Email @umb.edu</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</section> <!--Hero-->
+
+  <div class="container">
+    <!-- START ARTICLE FEED -->
+    <section class="articles">
+      <div class="column is-10 is-offset-1">
+          <!-- START ARTICLE -->
+          <div class="article">
+              <div class="card-content">
+                <div class="content article-body">
+              <h1 class="has-text-centered">CS 420: Introduction to the Theory of Computation</h1>
+<h2 class="has-text-centered" style="padding-bottom:1em;">Spring 2020</h2>
+
+<div class="buttons is-centered">
+<a class="button is-large is-link" href="syllabus.pdf">Syllabus</a>
+<a class="button is-large is-link" href="https://piazza.com/class/k5ubsxch57r196">Forum</a>
+<a class="button is-large is-link" href="https://www.gradescope.com/courses/81793">Homework submission</a>
+<a class="button is-large is-link" href="https://www.estalee.com/">Attendance</a>
+</div>
+
+<h1 id="course-information">Course information</h1>
+
+<ul>
+  <li><strong>Location:</strong> (Y01-1100) Room 1100, 1<sup>st</sup> floor, University Hall</li>
+  <li><strong>Schedule:</strong> 4:00pm to 5:15pm, Monday, Wednesday</li>
+</ul>
+
+<h1 id="instructor-contact">Instructor contact</h1>
+<ul>
+  <li><strong>Email:</strong> <a href="mailto:Tiago.Cogumbreiro@umb.edu"><code class="language-plaintext highlighter-rouge">Tiago.Cogumbreiro@umb.edu</code></a></li>
+  <li><strong>Office:</strong> (M03-0201-16) Room 0201-16, 3<sup>rd</sup> floor, McCormack</li>
+  <li><strong>Office hours:</strong> 1:00pm to 2:00pm Wednesday, Thursday, and Friday</li>
+</ul>
+
+<h1 id="teaching-assistants-contact">Teaching assistants contact</h1>
+<ul>
+  <li>Son Nam Nguyen</li>
+  <li><strong>Office:</strong> (M03-0152) Room 0152, 3<sup>rd</sup> floor, McCormack</li>
+  <li><strong>Office hours:</strong> 1:30pm to 2:30pm, Monday, Wednesday</li>
+</ul>
+
+<h1 id="resources">Resources</h1>
+
+<ul>
+  <li><a href="https://gitlab.com/cogumbreiro/turing">CS420 Supplementary Material: The Turing library (Coq)</a></li>
+  <li><a href="https://gitlab.com/cogumbreiro/karakuri/">CS420 Supplementary Material: NFA/DFA/REGEX algorithms (Python)</a></li>
+  <li><a href="/teaching/cs420/s20/lf.tgz">Logic Foundations exercises</a></li>
+</ul>
+
+<h2 id="class-schedule">Class Schedule</h2>
+
+<p><strong>Note:</strong> Any lecture titles in future dates are considered tentative.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>#</th>
+      <th>Lecture</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+
+<tr>
+
+  
+  <td></td>
+  <td></td>
+  <td><b>☙ Module 1: Logical Foundations ❧</b></td>
+  <td></td>
+
+</tr>
+
+
+
+<tr>
+
+  
+  
+  
+  <td>Mo, Jan 27</td>
+  <td>01</td>
+  <td>
+  
+    <a href="lecture01.html">Course overview; Coq intro</a>
+  
+  </td>
+  <td>
+    
+      
+      
+      <span class="buttons has-addons"><a class="button" title="Download lecture slides" href="lecture01.pdf"><span class="icon is-small"><i class="fas fa-book"></i></span></a><a class="button" title="Video recording" disabled=""><span class="icon is-small"><i class="fas fa-file-video"></i></span></a><a class="button" title="Class exercises" href="lecture01.v"><span class="icon is-small"><i class="fas fa-box"></i></span></a></span>
+    
+  </td>
+
+</tr>
+
+
+
+<tr>
+
+  
+  
+  
+  <td>We, Jan 29</td>
+  <td>02</td>
+  <td>
+  
+    <a href="lecture02.html">Pattern matching; reflexivity</a>
+  
+  </td>
+  <td>
+    
+      
+      
+      <span class="buttons has-addons"><a class="button" title="Download lecture slides" href="lecture02.pdf"><span class="icon is-small"><i class="fas fa-book"></i></span></a><a class="button" title="Video recording" href="https://echo360.org/media/28f68251-2762-48b5-836c-b056b50ce793/public"><span class="icon is-small"><i class="fas fa-file-video"></i></span></a><a class="button" title="Class exercises" href="lecture02.v"><span class="icon is-small"><i class="fas fa-box"></i></span></a></span>
+    
+  </td>
+
+</tr>
+
+
+
+<tr>
+
+  
+  
+  
+  <td>Mo, Feb  3</td>
+  <td>03</td>
+  <td>
+  
+    <a href="lecture03.html">Proofs by induction</a>
+  
+  </td>
+  <td>
+    
+      
+      
+      <span class="buttons has-addons"><a class="button" title="Download lecture slides" href="lecture03.pdf"><span class="icon is-small"><i class="fas fa-book"></i></span></a><a class="button" title="Video recording" href="https://echo360.org/media/20cf88a8-c051-4a7c-bbde-33b7cb89b43c/public"><span class="icon is-small"><i class="fas fa-file-video"></i></span></a><a class="button" title="Class exercises" href="lecture03.v"><span class="icon is-small"><i class="fas fa-box"></i></span></a></span>
+    
+  </td>
+
+</tr>
+
+
+
+<tr>
+
+  
+  
+  
+  <td>We, Feb  5</td>
+  <td>04</td>
+  <td>
+  
+    <a href="lecture04.html">Manipulating theorems; data-structures</a>
+  
+  </td>
+  <td>
+    
+      
+      
+      <span class="buttons has-addons"><a class="button" title="Download lecture slides" href="lecture04.pdf"><span class="icon is-small"><i class="fas fa-book"></i></span></a><a class="button" title="Video recording" href="https://echo360.org/media/eb2ef42d-3f1d-42d7-badd-2800d985ace2/public"><span class="icon is-small"><i class="fas fa-file-video"></i></span></a><a class="button" title="Class exercises" href="lecture04.v"><span class="icon is-small"><i class="fas fa-box"></i></span></a></span>
+    
+  </td>
+
+</tr>
+
+
+
+<tr>
+
+  
+  
+  
+  <td>Mo, Feb 10</td>
+  <td>05</td>
+  <td>
+  
+    <a href="lecture05.html">Polymorphism; Constructor injectivity, explosion principle</a>
+  
+  </td>
+  <td>
+    
+      
+      
+      <span class="buttons has-addons"><a class="button" title="Download lecture slides" href="lecture05.pdf"><span class="icon is-small"><i class="fas fa-book"></i></span></a><a class="button" title="Video recording" href="https://echo360.org/media/72cef3f3-2ec2-43dc-8c1e-ff312e583c30/public"><span class="icon is-small"><i class="fas fa-file-video"></i></span></a><a class="button" title="Class exercises" href="lecture05.v"><span class="icon is-small"><i class="fas fa-box"></i></span></a></span>
+    
+  </td>
+
+</tr>
+
+
+
+<tr>
+
+  
+  
+  
+  <td>We, Feb 12</td>
+  <td>06</td>
+  <td>
+  
+    <a href="lecture06.html">Logical Connectives</a>
+  
+  </td>
+  <td>
+    
+      
+      
+      <span class="buttons has-addons"><a class="button" title="Download lecture slides" href="lecture06.pdf"><span class="icon is-small"><i class="fas fa-book"></i></span></a><a class="button" title="Video recording" href="https://echo360.org/media/0cc14e1a-7f61-4a18-9cf0-2e694000bfa0/public"><span class="icon is-small"><i class="fas fa-file-video"></i></span></a><a class="button" title="Class exercises" href="lecture06.v"><span class="icon is-small"><i class="fas fa-box"></i></span></a></span>
+    
+  </td>
+
+</tr>
+
+
+
+<tr>
+
+  <td class="has-text-grey-light">Mo, Feb 17</td>
+  <td></td>
+  <td class="has-text-grey-light">(School closure)</td>
+  <td></td>
+
+</tr>
+
+
+
+<tr>
+
+  
+  
+  
+  <td>We, Feb 19</td>
+  <td>07</td>
+  <td>
+  
+    <a href="lecture07.html">Mini-test 1 recap</a>
+  
+  </td>
+  <td>
+    
+      
+      
+      <span class="buttons has-addons"><a class="button" title="Download lecture slides" href="lecture07.pdf"><span class="icon is-small"><i class="fas fa-book"></i></span></a><a class="button" title="Video recording" href="https://echo360.org/media/8e83d814-050b-4a8e-bdd3-99da20acbf2b/public"><span class="icon is-small"><i class="fas fa-file-video"></i></span></a><a class="button" title="Class exercises" href="lecture07.v"><span class="icon is-small"><i class="fas fa-box"></i></span></a></span>
+    
+  </td>
+
+</tr>
+
+
+
+<tr>
+
+  
+  <td></td>
+  <td></td>
+  <td><b>☙ Module 2: Regular Languages ❧</b></td>
+  <td></td>
+
+</tr>
+
+
+
+<tr>
+
+  
+  
+  
+  <td>Mo, Feb 24</td>
+  <td>08</td>
+  <td>
+  
+    <a href="lecture08.html">Formal languages</a>
+  
+  </td>
+  <td>
+    
+      
+      
+      <span class="buttons has-addons"><a class="button" title="Download lecture slides" href="lecture08.pdf"><span class="icon is-small"><i class="fas fa-book"></i></span></a><a class="button" title="Video recording" href="https://echo360.org/media/eafbe08d-649e-4e52-bdb0-6c9b3139b4f9/public"><span class="icon is-small"><i class="fas fa-file-video"></i></span></a><a class="button" title="Class exercises" href="lecture08.v"><span class="icon is-small"><i class="fas fa-box"></i></span></a></span>
+    
+  </td>
+
+</tr>
+
+
+
+<tr>
+
+  
+  
+  
+  <td>We, Feb 26</td>
+  <td>09</td>
+  <td>
+  
+    <a href="lecture09.html">Kleene star, language equivalence</a>
+  
+  </td>
+  <td>
+    
+      
+      
+      <span class="buttons has-addons"><a class="button" title="Download lecture slides" href="lecture09.pdf"><span class="icon is-small"><i class="fas fa-book"></i></span></a><a class="button" title="Video recording" href="https://echo360.org/media/561be86a-fd93-4308-a959-fbe3c2cf8c90/public"><span class="icon is-small"><i class="fas fa-file-video"></i></span></a><a class="button" title="Class exercises" href="lecture09.v"><span class="icon is-small"><i class="fas fa-box"></i></span></a></span>
+    
+  </td>
+
+</tr>
+
+
+
+<tr>
+
+  
+  
+  
+  <td>Mo, Mar  2</td>
+  <td>10</td>
+  <td>
+  
+    <a href="lecture10.html">Regular expressions <b>(Mini-Test 1)</b></a>
+  
+  </td>
+  <td>
+    
+      
+      
+      <span class="buttons has-addons"><a class="button" title="Download lecture slides" href="lecture10.pdf"><span class="icon is-small"><i class="fas fa-book"></i></span></a><a class="button" title="Video recording" href="https://echo360.org/media/97f0ee1d-7cde-4e35-b5a7-ce12ce28c306/public"><span class="icon is-small"><i class="fas fa-file-video"></i></span></a><a class="button" title="Class exercises" disabled=""><span class="icon is-small"><i class="fas fa-box"></i></span></a></span>
+    
+  </td>
+
+</tr>
+
+
+
+<tr>
+
+  
+  
+  
+  <td>We, Mar  4</td>
+  <td>11</td>
+  <td>
+  
+    <a href="lecture11.html">REGEX &amp; Nondeterministic Finite Automata</a>
+  
+  </td>
+  <td>
+    
+      
+      
+      <span class="buttons has-addons"><a class="button" title="Download lecture slides" href="lecture11.pdf"><span class="icon is-small"><i class="fas fa-book"></i></span></a><a class="button" title="Video recording" href="https://echo360.org/media/0f6e834b-29b9-46c7-b93b-b4edc04d56e4/public"><span class="icon is-small"><i class="fas fa-file-video"></i></span></a><a class="button" title="Class exercises" href="lecture11.v"><span class="icon is-small"><i class="fas fa-box"></i></span></a></span>
+    
+  </td>
+
+</tr>
+
+
+
+<tr>
+
+  
+  
+  
+  <td>Mo, Mar  9</td>
+  <td>12</td>
+  <td>
+  
+    <a href="lecture12.html">NFA ⇔ REGEX</a>
+  
+  </td>
+  <td>
+    
+      
+      
+      <span class="buttons has-addons"><a class="button" title="Download lecture slides" href="lecture12.pdf"><span class="icon is-small"><i class="fas fa-book"></i></span></a><a class="button" title="Video recording" href="https://echo360.org/media/459e0291-c7b4-4638-99a3-a032fb082df9/public"><span class="icon is-small"><i class="fas fa-file-video"></i></span></a><a class="button" title="Class exercises" disabled=""><span class="icon is-small"><i class="fas fa-box"></i></span></a></span>
+    
+  </td>
+
+</tr>
+
+
+
+<tr>
+
+  
+  
+  
+  <td>We, Mar 11</td>
+  <td>13</td>
+  <td>
+  
+    <a href="lecture13.html">Deterministic Finite Automata; NFA ⇔ DFA</a>
+  
+  </td>
+  <td>
+    
+      
+      
+      <span class="buttons has-addons"><a class="button" title="Download lecture slides" href="lecture13.pdf"><span class="icon is-small"><i class="fas fa-book"></i></span></a><a class="button" title="Video recording" href="https://echo360.org/media/db41f2e1-c6b7-4664-ba60-30b1048bb247/public"><span class="icon is-small"><i class="fas fa-file-video"></i></span></a><a class="button" title="Class exercises" disabled=""><span class="icon is-small"><i class="fas fa-box"></i></span></a></span>
+    
+  </td>
+
+</tr>
+
+
+
+<tr>
+
+  <td class="has-text-grey-light">Mo, Mar 16</td>
+  <td></td>
+  <td class="has-text-grey-light">(School closure)</td>
+  <td></td>
+
+</tr>
+
+
+
+<tr>
+
+  <td class="has-text-grey-light">We, Mar 18</td>
+  <td></td>
+  <td class="has-text-grey-light">(School closure)</td>
+  <td></td>
+
+</tr>
+
+
+
+<tr>
+
+  
+  <td></td>
+  <td></td>
+  <td><b>☙ Module 3: Context-free Languages ❧</b></td>
+  <td></td>
+
+</tr>
+
+
+
+<tr>
+
+  
+  
+  
+  <td>Mo, Mar 23</td>
+  <td>14</td>
+  <td>
+  
+    <a href="lecture14.html">Pumping lemma; Non-regular languages; Mini-test 2 recap</a>
+  
+  </td>
+  <td>
+    
+      
+      
+      <span class="buttons has-addons"><a class="button" title="Download lecture slides" href="lecture14.pdf"><span class="icon is-small"><i class="fas fa-book"></i></span></a><a class="button" title="Video recording" href="https://www.youtube.com/playlist?list=PL_fXogTdDGQdpggDhmLSxKxxXGOT-42rM"><span class="icon is-small"><i class="fas fa-file-video"></i></span></a><a class="button" title="Class exercises" href="lecture14.v"><span class="icon is-small"><i class="fas fa-box"></i></span></a></span>
+    
+  </td>
+
+</tr>
+
+
+
+<tr>
+
+  
+  
+  
+  <td>We, Mar 25</td>
+  <td>15</td>
+  <td>
+  
+    <a href="lecture15.html">Context-free grammars</a>
+  
+  </td>
+  <td>
+    
+      
+      
+      <span class="buttons has-addons"><a class="button" title="Download lecture slides" href="lecture15.pdf"><span class="icon is-small"><i class="fas fa-book"></i></span></a><a class="button" title="Video recording" href="https://www.youtube.com/playlist?list=PL_fXogTdDGQd18LP9rmraukUE3h_M9NsF"><span class="icon is-small"><i class="fas fa-file-video"></i></span></a><a class="button" title="Class exercises" href="lecture15.v"><span class="icon is-small"><i class="fas fa-box"></i></span></a></span>
+    
+  </td>
+
+</tr>
+
+
+
+<tr>
+
+  
+  
+  
+  <td>Mo, Mar 30</td>
+  <td>16</td>
+  <td>
+  
+    <a href="lecture16.html">Pushdown Atomata</a>
+  
+  </td>
+  <td>
+    
+      
+      
+      <span class="buttons has-addons"><a class="button" title="Download lecture slides" href="lecture16.pdf"><span class="icon is-small"><i class="fas fa-book"></i></span></a><a class="button" title="Video recording" href="https://www.youtube.com/playlist?list=PL_fXogTdDGQc-aMjMYzo2UUgO-6F384op"><span class="icon is-small"><i class="fas fa-file-video"></i></span></a><a class="button" title="Class exercises" disabled=""><span class="icon is-small"><i class="fas fa-box"></i></span></a></span>
+    
+  </td>
+
+</tr>
+
+    
+<tr>
+  <td></td>
+  <td></td>
+    <td>
+        <a href="https://piazza.com/class_profile/get_resource/k5ubsxch57r196/p1e5qskinc6o2je31k2hol3khi22">
+        <span class="icon is-small"><i class="fas fa-file-audio"></i></span>
+        QA session
+        </a>
+    </td>
+</tr>
+    
+
+
+
+<tr>
+
+  
+  
+  
+  <td>We, Apr  1</td>
+  <td>17</td>
+  <td>
+  
+    <a href="lecture17.html">PDA ⇔ CFG</a>
+  
+  </td>
+  <td>
+    
+      
+      
+      <span class="buttons has-addons"><a class="button" title="Download lecture slides" href="lecture17.pdf"><span class="icon is-small"><i class="fas fa-book"></i></span></a><a class="button" title="Video recording" href="https://www.youtube.com/playlist?list=PL_fXogTdDGQduvsc5EQLFgSBy4RyFZJFm"><span class="icon is-small"><i class="fas fa-file-video"></i></span></a><a class="button" title="Class exercises" disabled=""><span class="icon is-small"><i class="fas fa-box"></i></span></a></span>
+    
+  </td>
+
+</tr>
+
+
+
+<tr>
+
+  
+  
+  
+  <td>Mo, Apr  6</td>
+  <td>18</td>
+  <td>
+  
+    <a href="lecture18.html">Pumping lemma; Non-context-free Languages; Turing Machines</a>
+  
+  </td>
+  <td>
+    
+      
+      
+      <span class="buttons has-addons"><a class="button" title="Download lecture slides" href="lecture18.pdf"><span class="icon is-small"><i class="fas fa-book"></i></span></a><a class="button" title="Video recording" href="https://www.youtube.com/playlist?list=PL_fXogTdDGQf-IHcWs3CKbD14mPBEz4lH"><span class="icon is-small"><i class="fas fa-file-video"></i></span></a><a class="button" title="Class exercises" disabled=""><span class="icon is-small"><i class="fas fa-box"></i></span></a></span>
+    
+  </td>
+
+</tr>
+
+
+
+<tr>
+
+  
+  
+  
+  <td>We, Apr  8</td>
+  <td>19</td>
+  <td>
+  
+    <a href="lecture19.html">Variants of Turing Machines</a>
+  
+  </td>
+  <td>
+    
+      
+      
+      <span class="buttons has-addons"><a class="button" title="Download lecture slides" href="lecture19.pdf"><span class="icon is-small"><i class="fas fa-book"></i></span></a><a class="button" title="Video recording" href="https://www.youtube.com/playlist?list=PL_fXogTdDGQcndM6CcWeMCrI7U2yy8v7T"><span class="icon is-small"><i class="fas fa-file-video"></i></span></a><a class="button" title="Class exercises" disabled=""><span class="icon is-small"><i class="fas fa-box"></i></span></a></span>
+    
+  </td>
+
+</tr>
+
+
+
+<tr>
+
+  
+  
+  
+  <td>Mo, Apr 13</td>
+  <td>20</td>
+  <td>
+  
+    <a href="lecture20.html">Acceptance, emptiness and equality tests</a>
+  
+  </td>
+  <td>
+    
+      
+      
+      <span class="buttons has-addons"><a class="button" title="Download lecture slides" href="lecture20.pdf"><span class="icon is-small"><i class="fas fa-book"></i></span></a><a class="button" title="Video recording" href="https://www.youtube.com/playlist?list=PL_fXogTdDGQcNF7kueuPukQ747ymJpzvX"><span class="icon is-small"><i class="fas fa-file-video"></i></span></a><a class="button" title="Class exercises" disabled=""><span class="icon is-small"><i class="fas fa-box"></i></span></a></span>
+    
+  </td>
+
+</tr>
+
+    
+<tr>
+  <td></td>
+  <td></td>
+    <td>
+        <a href="https://piazza.com/class_profile/get_resource/k5ubsxch57r196/k8z35whga1r7ik">
+        <span class="icon is-small"><i class="fas fa-file-audio"></i></span>
+        QA session
+        </a>
+    </td>
+</tr>
+    
+<tr>
+  <td></td>
+  <td></td>
+    <td>
+        <a href="https://echo360.org/media/636a5ca2-4364-4384-966d-6b30e0c1c42c/public">
+        <span class="icon is-small"><i class="fas fa-file-video"></i></span>
+        Lecture 17 of Fall'19
+        </a>
+    </td>
+</tr>
+    
+<tr>
+  <td></td>
+  <td></td>
+    <td>
+        <a href="https://echo360.org/media/6d26c362-ee93-491c-a35a-f09f90b28a61/public">
+        <span class="icon is-small"><i class="fas fa-file-video"></i></span>
+        Lecture 18 of Fall'19
+        </a>
+    </td>
+</tr>
+    
+
+
+
+<tr>
+
+  
+  
+  
+  <td>We, Apr 15</td>
+  <td>21</td>
+  <td>
+  
+    <a href="lecture21.html">Undecidability</a>
+  
+  </td>
+  <td>
+    
+      
+      
+      <span class="buttons has-addons"><a class="button" title="Download lecture slides" href="lecture21.pdf"><span class="icon is-small"><i class="fas fa-book"></i></span></a><a class="button" title="Video recording" href="https://www.youtube.com/playlist?list=PL_fXogTdDGQdVik5Vv5fpJ9S7bYtC0xQT"><span class="icon is-small"><i class="fas fa-file-video"></i></span></a><a class="button" title="Class exercises" href="lecture21.v"><span class="icon is-small"><i class="fas fa-box"></i></span></a></span>
+    
+  </td>
+
+</tr>
+
+    
+<tr>
+  <td></td>
+  <td></td>
+    <td>
+        <a href="https://echo360.org/media/b16d2cb1-ad05-45e0-852a-7fbec06672a0/public">
+        <span class="icon is-small"><i class="fas fa-file-video"></i></span>
+        What is a PhD in CS? (Fall '19)
+        </a>
+    </td>
+</tr>
+    
+
+
+
+<tr>
+
+  <td class="has-text-grey-light">Mo, Apr 20</td>
+  <td></td>
+  <td class="has-text-grey-light">(School closure)</td>
+  <td></td>
+
+</tr>
+
+
+
+<tr>
+
+  
+  <td></td>
+  <td></td>
+  <td><b>☙ Module 4: Decidability ❧</b></td>
+  <td></td>
+
+</tr>
+
+
+
+<tr>
+
+  
+  
+  
+  <td>We, Apr 22</td>
+  <td>22</td>
+  <td>
+  
+    <a href="lecture22.html">Undecidable problems</a>
+  
+  </td>
+  <td>
+    
+      
+      
+      <span class="buttons has-addons"><a class="button" title="Download lecture slides" href="lecture22.pdf"><span class="icon is-small"><i class="fas fa-book"></i></span></a><a class="button" title="Video recording" href="https://echo360.org/media/c8cf0afd-13c1-4f50-8732-d2c15f779b14/public"><span class="icon is-small"><i class="fas fa-file-video"></i></span></a><a class="button" title="Class exercises" disabled=""><span class="icon is-small"><i class="fas fa-box"></i></span></a></span>
+    
+  </td>
+
+</tr>
+
+    
+<tr>
+  <td></td>
+  <td></td>
+    <td>
+        <a href="https://www.youtube.com/playlist?list=PL_fXogTdDGQdoHoSg0-cUJCfmpCeq7R77">
+        <span class="icon is-small"><i class="fas fa-file-video"></i></span>
+        Homework 7 tutorial
+        </a>
+    </td>
+</tr>
+    
+
+
+
+<tr>
+
+  
+  
+  
+  <td>Mo, Apr 27</td>
+  <td>23</td>
+  <td>
+  
+    <a href="lecture23.html">Undecidable problems</a>
+  
+  </td>
+  <td>
+    
+      
+      
+      <span class="buttons has-addons"><a class="button" title="Download lecture slides" href="lecture23.pdf"><span class="icon is-small"><i class="fas fa-book"></i></span></a><a class="button" title="Video recording" href="https://echo360.org/media/05d398ae-537a-4fd7-98dc-3d99d44da859/public"><span class="icon is-small"><i class="fas fa-file-video"></i></span></a><a class="button" title="Class exercises" disabled=""><span class="icon is-small"><i class="fas fa-box"></i></span></a></span>
+    
+  </td>
+
+</tr>
+
+
+
+<tr>
+
+  
+  
+  
+  <td>We, Apr 29</td>
+  <td>24</td>
+  <td>
+  
+    <a href="lecture24.html">Mapping reducibility</a>
+  
+  </td>
+  <td>
+    
+      
+      
+      <span class="buttons has-addons"><a class="button" title="Download lecture slides" href="lecture24.pdf"><span class="icon is-small"><i class="fas fa-book"></i></span></a><a class="button" title="Video recording" href="https://echo360.org/media/db7d50d5-986a-4bdb-a65a-b73c9c5a30d9/public"><span class="icon is-small"><i class="fas fa-file-video"></i></span></a><a class="button" title="Class exercises" href="lecture24.v"><span class="icon is-small"><i class="fas fa-box"></i></span></a></span>
+    
+  </td>
+
+</tr>
+
+    
+<tr>
+  <td></td>
+  <td></td>
+    <td>
+        <a href="https://www.youtube.com/playlist?list=PL_fXogTdDGQegtKOg9Z5MxENMrA-IYKwA">
+        <span class="icon is-small"><i class="fas fa-file-video"></i></span>
+        Homework 8 tutorial
+        </a>
+    </td>
+</tr>
+    
+
+
+
+<tr>
+
+  
+  
+  
+  <td>Mo, May  4</td>
+  <td>25</td>
+  <td>
+  
+    Mapping reducibility
+  
+  </td>
+  <td>
+    
+  </td>
+
+</tr>
+
+
+
+<tr>
+
+  
+  
+  
+  <td>We, May  6</td>
+  <td>26</td>
+  <td>
+  
+    QA session
+  
+  </td>
+  <td>
+    
+  </td>
+
+</tr>
+
+
+
+<tr>
+
+  
+  
+  
+  <td>We, May 11</td>
+  <td>27</td>
+  <td>
+  
+    QA session
+  
+  </td>
+  <td>
+    
+  </td>
+
+</tr>
+
+
+
+<tr>
+
+  
+  
+  
+  <td>We, May 13</td>
+  <td>28</td>
+  <td>
+  
+    QA session
+  
+  </td>
+  <td>
+    
+  </td>
+
+</tr>
+
+
+
+  </tbody>
+</table>
+
+                </div>
+              </div>
+          </div>
+      </div>
+    </section>
+  </div>
+
+</body>
+</html>
